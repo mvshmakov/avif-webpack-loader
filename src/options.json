@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "alpha": {
+      "type": "boolean"
+    },
+    "pixelFormat": {
+      "oneOf": [
+        { "type": "string", "pattern": "YUV444" },
+        { "type": "string", "pattern": "YUV422" },
+        { "type": "string", "pattern": "YUV420" },
+        { "type": "string", "pattern": "YUV400" },
+        { "type": "string", "pattern": "NONE" }
+      ]
+    }
+  },
+  "additionalProperties": false
+}
