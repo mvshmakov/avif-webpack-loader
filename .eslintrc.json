@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:json/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2018
+  },
+  "env": {
+    "node": true,
+    "jest": true,
+    "es6": true
+  },
+  "rules": {
+    "no-var": "error",
+    "no-console": "error",
+    "no-unused-vars": "warn"
+  }
+}

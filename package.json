@@ -1,0 +1,73 @@
+{
+  "name": "avif-webpack-loader",
+  "version": "0.1.0",
+  "description": "Webpack loader for AVIF-encoded images",
+  "author": "Maxim Shmakov <mvshmakov@mail.ru>",
+  "license": "MIT",
+  "keywords": [
+    "avif",
+    "av1",
+    "webpack",
+    "loader",
+    "images"
+  ],
+  "homepage": "https://github.com/mvshmakov/avif-webpack-loader",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mvshmakov/avif-webpack-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mvshmakov/avif-webpack-loader/issues"
+  },
+  "main": "src/loader.js",
+  "type": "module",
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint:check": "eslint src/*.{js,json} test/*.js",
+    "lint:fix": "eslint --fix src/*.{js,json} test/*.js",
+    "prettier:check": "prettier --check src/*.{js,json} test/*.js",
+    "prettier:fix": "prettier --write src/*.{js,json} test/*.js",
+    "test": "RUN_IN_MEMORY=true jest --runInBand"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:fix",
+      "npm run prettier:fix",
+      "npm run test",
+      "git add ."
+    ]
+  },
+  "dependencies": {
+    "@saschazar/wasm-avif": "^1.0.0",
+    "@saschazar/wasm-image-loader": "^3.0.0",
+    "loader-utils": "^2.0.0",
+    "schema-utils": "^2.7.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-json": "^2.1.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "file-loader": "^6.1.0",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "lint-staged": "^10.4.0",
+    "memfs": "^3.2.0",
+    "prettier": "^2.1.2",
+    "prettier-config-standard": "^1.0.1",
+    "webpack": "^4.0.0 || ^5.0.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
