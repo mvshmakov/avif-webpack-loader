@@ -50,7 +50,7 @@
   "dependencies": {
     "@saschazar/wasm-avif": "^1.0.0",
     "@saschazar/wasm-image-loader": "^3.0.0",
-    "loader-utils": "^2.0.0",
+    "loader-utils": "^2.0.4",
     "schema-utils": "^2.7.1"
   },
   "devDependencies": {
@@ -62,12 +62,12 @@
     "eslint-plugin-prettier": "^3.1.4",
     "file-loader": "^6.1.0",
     "husky": "^4.3.0",
-    "jest": "^26.4.2",
+    "jest": "^30.0.2",
     "lint-staged": "^10.4.0",
     "memfs": "^3.2.0",
     "prettier": "^2.1.2",
     "prettier-config-standard": "^1.0.1",
-    "webpack": "^4.0.0 || ^5.0.0",
-    "webpack-cli": "^3.3.12"
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
   }
 }
